@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'; // Removed CardDescription as it's not used per design
+import { cn } from '@/lib/utils';
 
 interface KeyMetricCardProps {
   title: string;
@@ -16,7 +17,11 @@ const KeyMetricCard: React.FC<KeyMetricCardProps> = ({ title, value, icon, descr
         {icon && <div className="h-5 w-5 text-accent">{icon}</div>}
       </CardHeader>
       <CardContent className="pb-4 px-4">
-        <div className="text-2xl font-bold text-foreground">{value}</div>
+        <div
+          className={cn(
+            'text-2xl font-bold text-foreground',
+            typeof value === 'number' && value < 0 && 'text-red-500')}
+        >{value}</div>
         {description && <p className="text-xs text-muted-foreground pt-1">{description}</p>}
       </CardContent>
     </Card>
