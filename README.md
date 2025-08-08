@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Bilancio semplice 2025
  analisi di bilancio aziendale
 =======
@@ -9,4 +9,4 @@ This project is a Next.js application titled "Financial Insights Dashboard" as p
 ## Setup and Installation
 
 1.  **Clone the repository:**
->>>>>>> master
+
